@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
 	});
 	return posts.blogs.map((p) => {
 		return {
-			loc: `https://blog-0-0.netlify.app/posts/${p.id}`,
+			loc: `https://sport-blog-ahemd.netlify.app/posts/${p.id}`,
 			lastmod: p.created_at,
 		};
 	});

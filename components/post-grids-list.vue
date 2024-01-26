@@ -14,8 +14,10 @@
 					class="w-full h-full object-cover absolute rounded-3xl"
 					:alt="title"
 				/> -->
-				<img
-                loading="lazy"
+				<CldImage
+					width="500"
+					height="500"
+					preserveTransformations
 					:src="image"
 					class="w-full h-full absolute rounded-3xl top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
 					:alt="title"

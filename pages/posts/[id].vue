@@ -34,21 +34,19 @@
 					{{ p.created_at.slice(0, 10) }}
 				</p>
 
-				<img lazy :src="p.image_url" :alt="title" />
+				<!-- <NuxtImg :src="p.image_url" :alt="title" /> -->
 				<!-- <NuxtImg :src="p.image_url"/> -->
 
-				<!-- <CldImage
-					aspectRatio="0/0"
-					width="auto"
-					height="auto"
+				<CldImage
+					width="800"
+					height="500"
 					class="mx-auto object-cover"
-					sizes="sm:100vw, md:500px"
 					:src="
 						p.image_url ? p.image_url.slice(50) : 'https://placehold.co/600x400'
 					"
 					:alt="p.title"
 					format="webp"
-				/> -->
+				/>
 
 				<div class="content mt-10 dark:text-white" v-html="p.content"></div>
 				<Title>{{ p.title }}</Title>

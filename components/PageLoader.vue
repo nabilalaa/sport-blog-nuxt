@@ -39,30 +39,20 @@
 	</div>
 </template>
 
-<script>
-import axios from "axios";
-export default {
-	name: "pageLoader",
-	methods: {
-		loading() {
-			axios.get("/api/articles", {
-				headers: {
-					Authorization: "Nn123123"
-				}
-			}).then((response) => {
-				if (response) {
-					document.querySelector(".loader").style.display =
-						"none";
-					document.body.style.overflow = "auto";
-				}
-			});
+<script setup>
+onMounted(() => {
+	document.body.style.overflow = "hidden";
+	$fetch("/api/articles", {
+		headers: {
+			Authorization: "Nn123123",
+		},
+	}).then((response) => {
+		if (response) {
+			document.querySelector(".loader").style.display = "none";
+			document.body.style.overflow = "auto";
 		}
-	},
-	mounted() {
-		document.body.style.overflow = "hidden";
-		window.addEventListener("load", this.loading());
-	}
-};
+	});
+});
 </script>
 
 <style></style>

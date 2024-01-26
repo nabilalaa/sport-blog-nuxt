@@ -10,8 +10,22 @@ export default defineNuxtConfig({
 		},
 	},
 	ssr: true,
-	modules: ["@nuxtjs/supabase", "@nuxtjs/tailwindcss"],
+	modules: [
+		"@nuxtjs/supabase",
+		"@nuxtjs/tailwindcss",
+		"@nuxtjs/seo",
+		"@nuxtjs/cloudinary",
+	],
 	supabase: {
 		redirect: false,
+	},
+	cloudinary: {
+		cloudName: "dnru0whph",
+	},
+	site: {
+		url: "https://sport-blog-ahemd.netlify.app",
+		name: "sport blog",
+		description: "",
+		defaultLocale: "ar",
 	},
 });
